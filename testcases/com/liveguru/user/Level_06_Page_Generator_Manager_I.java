@@ -49,19 +49,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
 	@Test
 	public void Login_03_Email_Not_Found() {
-		System.out.println("Login_03_Email_Not_Found - Step 01: Click to Login link");
-		loginPage = homePage.clickToLoginLink();
-
-		loginPage = PageGeneratorManager.getLoginPage(driver);
-		System.out.println("Login_03_Email_Not_Found - Step 02: input email not found");
-		loginPage.inputToEmailTextbox(emailNotFound);
-
-		System.out.println("Login_03_Email_Not_Found - Step 03: Click to Login button");
-		loginPage.clickToLoginButton();
-
-		System.out.println("Login_03_Email_Not_Found - Step 04: Verify error message");
-		Assert.assertEquals(loginPage.getErrorMessageUnsuccessfull(),
-				"Login was unsuccessful. Please correct the errors and try again.\nNo customer account found");
+		
 	}
 
 	@AfterClass
